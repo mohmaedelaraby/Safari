@@ -1,17 +1,17 @@
 <template>
   <NavBar></NavBar>
-  <banner-home></banner-home>
+  <CardsVue></CardsVue>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
-import BannerHome from "./components/BannerHome.vue";
+import CardsVue from "./components/CardsVue.vue";
+
 
 export default {
   name: "App",
   components: {
-    NavBar,
-    BannerHome
+    NavBar,CardsVue
   },
 };
 </script>
@@ -29,6 +29,9 @@ export default {
   display: none;
 }
 * {
+  margin: 0;
+}
+.row{
   margin: 0;
 }
 </style>

@@ -1,4 +1,4 @@
-<template>
+ <template>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -116,9 +116,9 @@ export default {
         
      }
      .input__active{
-        border: 1px solid black;
-        border-top-left-radius: 50px;
-          border-bottom-left-radius: 50px;
+      border: none;
+  
+        background-color: rgb(233, 232, 232);;
         position: absolute;
         right: 0;
         height: 100%;

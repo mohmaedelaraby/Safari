@@ -1,16 +1,19 @@
 <template>
-<NavBar></NavBar>
+  <NavBar></NavBar>
+  <banner-home></banner-home>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
+import NavBar from "./components/NavBar.vue";
+import BannerHome from "./components/BannerHome.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    NavBar
-  }
-}
+    NavBar,
+    BannerHome
+  },
+};
 </script>
 
 <style>
@@ -22,11 +25,10 @@ export default {
   color: #2c3e50;
 }
 
-.nav-link.dropdown-toggle::after{
-            display: none;  
+.nav-link.dropdown-toggle::after {
+  display: none;
 }
-*{
+* {
   margin: 0;
-
 }
 </style>

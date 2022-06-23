@@ -69,24 +69,14 @@
               {{ item }}
             </a>
           </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDarkDropdownMenuLink"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-            <div class="search__icon__container">
-                <img src="@/assets/search.svg" alt="search" class="search__icon"/>
-            </div>
-            
-            </a>
-          </li>
         </ul>
       </div>
+    </div>
+
+    <div class="search__icon__container" @click="active=true">
+    
+    <input  v-if="active" :class="{ 'input__active': 'input__not__active' }"  placeholder="Search ..." @keyup.enter="active=false"/>
+      <img src="@/assets/search.svg" alt="search" class="search__icon" />
     </div>
   </nav>
 </template>
@@ -97,6 +87,7 @@ export default {
   data() {
     return {
       navItems: ["ABOUT", "PORTOFOLIO", "BLOG", "FEATURES", "PAGES", "CONTCAT"],
+      active:false
     };
   },
 };
@@ -105,88 +96,110 @@ export default {
 <style lang="scss" scoped>
 @media screen and (min-width: 1024px) {
   .navbar {
-    .navbar-brand {
-      margin-left: 100px;
-      .logo {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
+    padding: 0px;
+    height: 8vh;
 
-        img {
-          width: 100%;
-          height: 35px;
-          transition: 0.5s ease all;
+    .search__icon__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(233, 232, 232);
+      height: 100%;
+      width: 7%;
+      cursor: pointer;
+   
 
-          @media (max-width: 426px) {
-            width: 90%;
-            height: 30px;
+     .input__not__active{
+        border: none;
+        right: 0;
+        width: 0;
+        
+     }
+     .input__active{
+        border: 1px solid black;
+        border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 80%;
+        outline: none;
+        font-size: 25px;
+         transition: 0.5s ease-in all;
+     }
+
+      .search__icon {
+        height: 20px;
+      }
+    }
+    .container-fluid {
+      padding: 0px;
+      .navbar-brand {
+        margin-left: 100px;
+        .logo {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          img {
+            width: 100%;
+            height: 35px;
+            transition: 0.5s ease all;
+
+            @media (max-width: 426px) {
+              width: 90%;
+              height: 30px;
+            }
           }
         }
       }
-    }
 
-    .collapse {
-      justify-content: space-around;
+      .collapse {
+        justify-content: space-around;
 
-      .navbar-nav {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        .nav-item {
-            margin-left: 40px;
-            .search__icon__container{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: gray;
-                .search__icon{
-                  height: 20px;
-          transition: 0.5s ease all;
-
-          @media (max-width: 426px) {
-            width: 90%;
-            height: 30px;
-          }
-            }
-            }
-            
-          .nav-link {
-            color: grey;
-            font-weight: 500;
-            font-style: 14px;
-            &:hover {
-              transition: 0.2s ease-in-out;
-              color: aqua;
-            }
-          }
-        }
-        .dropdown {
-          &:hover {
-            .dropdown-menu {
-              display: block;
-              margin-top: 0;
-              border-radius: 0;
-              hr {
-                color: gray;
-                margin-left: 5px;
-                margin-right: 5px;
-              }
-              li {
-                margin-bottom: 18px;
-              }
-              .dropdown-item {
-                color: gray;
+        .navbar-nav {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          .nav-item {
+            margin-right: 40px;
+            .nav-link {
+              color: grey;
+              font-weight: 500;
+              font-style: 14px;
+              &:hover {
                 transition: 0.2s ease-in-out;
-                padding-left: 34px;
-                padding-right: 47px;
-                padding-top: 8px;
+                color: aqua;
+              }
+            }
+          }
 
-                &:hover {
-                  background-color: white;
+          .dropdown {
+            &:hover {
+              .dropdown-menu {
+                display: block;
+                margin-top: 0;
+                border-radius: 0;
+                hr {
+                  color: gray;
+                  margin-left: 5px;
+                  margin-right: 5px;
+                }
+                li {
+                  margin-bottom: 18px;
+                }
+                .dropdown-item {
+                  color: gray;
                   transition: 0.2s ease-in-out;
-                  color: aqua;
+                  padding-left: 34px;
+                  padding-right: 47px;
+                  padding-top: 8px;
+
+                  &:hover {
+                    background-color: white;
+                    transition: 0.2s ease-in-out;
+                    color: aqua;
+                  }
                 }
               }
             }
@@ -195,5 +208,19 @@ export default {
       }
     }
   }
+}
+@media screen and (max-width: 770px) {
+    .search__icon__container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: red;
+        width: 100%;
+        height: 40px;
+        .search__icon {
+        height: 20px;
+        margin-right: 25px;
+      }
+    }
 }
 </style>

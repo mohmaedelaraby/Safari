@@ -1,8 +1,9 @@
 <template>
   <NavBar></NavBar>
   <CardsVue></CardsVue>
-  <FilterSection/>
-  <FooterSection/>
+  <FilterSection />
+  <TestMoneliesSwipper />
+  <FooterSection />
 </template>
 
 <script>
@@ -11,6 +12,7 @@ import CardsVue from "./components/CardsVue.vue";
 import FilterSection from "./components/Filteretion/FilterSection.vue";
 import FooterSection from "./components/FooterSection.vue";
 
+import TestMoneliesSwipper from "./components/TestMoneliesSwipper.vue";
 
 export default {
   name: "App",
@@ -18,8 +20,9 @@ export default {
     NavBar,
     CardsVue,
     FilterSection,
-    FooterSection
-},
+    FooterSection,
+    TestMoneliesSwipper,
+  },
 };
 </script>
 
@@ -38,7 +41,34 @@ export default {
   margin: 0;
   overflow-x: hidden;
 }
-.row{
+.row {
   margin: 0px;
+}
+.swiper-button-next {
+  right: 125px;
+  left: auto;
+  background-color: #8888;
+  padding: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.swiper-button-next::after {
+  content: "next";
+  font-size: 14px;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: 125px;
+  right: auto;
+  background-color: #8888;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.swiper-button-prev::after {
+  content: "prev";
+  font-size: 14px;
+  color: white;
 }
 </style>

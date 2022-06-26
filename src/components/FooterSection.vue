@@ -8,72 +8,97 @@
         </div>
       </div>
     </div>
-    <div class="row" style="background-color: #222222;">
+    <div class="row" style="background-color: #222222">
       <div class="container">
-
         <div class="row">
-  <div class="col-xl-3 col-sm-6 col-12">
-          <div class="footer__upper">
-            <h3>STAY IN TOUCH</h3>
-            <p>
-              Nunc a urna sed neque fermentum pharetra. Aliquam suscipit purus
-              nisi convallis nulla.
-            </p>
-            <img src="@/assets/flednr.svg" alt="flender" />
-          </div>
-          <div class="footer__lower">
-            <div class="col-xl-6 col-sm-6 col-xs-12">
-              <h4 class="footer__lower__header">LOCATION</h4>
-              <p class="footer__lower__txt">
-                4456 Bee Street Hoxeyville, MI 49641
+          <div class="col-xl-3 col-sm-6 col-12">
+            <div class="footer__upper">
+              <h3>STAY IN TOUCH</h3>
+              <p>
+                Nunc a urna sed neque fermentum pharetra. Aliquam suscipit purus
+                nisi convallis nulla.
               </p>
+              <img src="@/assets/flednr.svg" alt="flender" />
             </div>
-            <div class="col-xl-6 col-sm-6 col-xs-12">
-              <h4 class="footer__lower__header">LOCATION</h4>
-              <p class="footer__lower__txt">
-                4456 Bee Street Hoxeyville, MI 49641
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-sm-6 col-12" style="margin-left: 15px">
-          <div class="footer__upper">
-            <h3>FLICKR FEED</h3>
-          </div>
-          <div class="footer__lower">
-            <div class="img__container">
-              <img
-                v-for="(item, index) in footerIMG"
-                v-bind:key="index"
-                :src="item"
-                alt="footerimg"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-sm-6 col-12" style="margin-left: 15px">
-          <div class="footer__upper">
-            <h3>TWEETS</h3>
-          </div>
-          <div class="footer__lower">
-            <div class="L">
-              <div v-for="item in 3" v-bind:key="item" class="L__container">
-                <img src="@/assets/L.svg" alt="L" />
-                <p>
-                  Nunc a urna sed neque ferment pharetra. purus nisi convallis
-                  nulla <strong>2 days ago </strong>
+            <div class="footer__lower">
+              <div class="col-xl-6 col-sm-6 col-xs-12">
+                <h4 class="footer__lower__header">LOCATION</h4>
+                <p class="footer__lower__txt">
+                  4456 Bee Street Hoxeyville, MI 49641
+                </p>
+              </div>
+              <div class="col-xl-6 col-sm-6 col-xs-12">
+                <h4 class="footer__lower__header">LOCATION</h4>
+                <p class="footer__lower__txt">
+                  4456 Bee Street Hoxeyville, MI 49641
                 </p>
               </div>
             </div>
           </div>
+
+          <div class="col-xl-3 col-sm-6 col-12">
+            <div class="footer__upper">
+              <h3>FLICKR FEED</h3>
+            </div>
+            <div class="footer__lower">
+              <div class="img__container">
+                <img
+                  v-for="(item, index) in footerIMG"
+                  v-bind:key="index"
+                  :src="item"
+                  alt="footerimg"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-sm-6 col-12">
+            <div class="footer__upper">
+              <h3>TWEETS</h3>
+            </div>
+            <div class="footer__lower">
+              <div class="L">
+                <div v-for="item in 3" v-bind:key="item" class="L__container">
+                  <img src="@/assets/L.svg" alt="L" />
+                  <p>
+                    Nunc a urna sed neque ferment pharetra. purus nisi convallis
+                    nulla <strong>2 days ago </strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-sm-6 col-xs-12">
+            <div class="row">
+              <ul>
+                <li v-for="item in 5" v-bind:key="item">
+                  <div class="list-item">
+                    <div class="list-item-arrow">
+                      <img src="@/assets/Shape6.svg" alt="x" />
+                    </div>
+                    <div class="list-item-txt">Theme</div>
+                  </div>
+                  <hr />
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="col-xl-3 col-sm-6 col-xs-12"></div>
       </div>
-    
+    </div>
+
+    <div class="row" style="background-color: #222222">
+     
+        <div class="last_footer">
+            <div class="left_footer_container">
+                    <div class="left">2013 © Unify. ALL Rights Reserved.</div>
+            <div class="right">Designed by PsdBooster</div>
+            </div>
+        
         </div>
-      </div>
+
+    </div>
   </section>
 </template>
 
@@ -114,7 +139,7 @@ section {
       }
     }
     .container {
-      width: 95%;
+      width: 90%;
       margin-top: 95px;
       background: #222222;
       display: flex;
@@ -158,25 +183,28 @@ section {
         .img__container {
           display: flex;
           flex-wrap: wrap;
-          width: 80%;
+          width: 90%;
           align-items: center;
           justify-content: space-between;
+          img{
+            margin-top: 10px;
+          }
         }
 
-        .L{
-            display: flex;
-            flex-direction: column;
-            .L__container{
+        .L {
           display: flex;
-          align-content: center;
-          justify-content: space-between;
-          img{
-                width: 10%;
-    /* margin: 9px; */
-    margin-right: 16px;
-    /* display: flex; */
-    height: 45%;
-          }
+          flex-direction: column;
+          .L__container {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            img {
+              width: 10%;
+              /* margin: 9px; */
+              margin-right: 16px;
+              /* display: flex; */
+              height: 45%;
+            }
             p {
               color: white;
               text-align: left;
@@ -184,11 +212,43 @@ section {
             strong {
               color: #888888;
             }
-          
+          }
         }
-        }
-        
       }
+    }
+    ul {
+      list-style: none;
+      li {
+        hr {
+          color: #888888;
+        }
+        .list-item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          color: #888888;
+
+          .list-item-arrow {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .last_footer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #888888;
+        color: #888888;
+        padding: 5px;
+        .left_footer_container{
+            width: 90%;
+            display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
     }
   }
 }

@@ -2,14 +2,12 @@
   <div class="card">
     <div class="card-img-top" >
         <div class="cirlce">
-            <img src="@/assets/pen.png" alt="pen"/>
+            <img :src="src" alt="pen"/>
         </div>
     </div>
     <div class="card-body">
-     <p class="cardheader">STRATEGY DESIGN</p>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
+     <p class="cardheader"> {{header}}</p>
+      <p class="card-text">{{txt}}
       </p>
     </div>
   </div>
@@ -19,29 +17,30 @@
 
 export default {
     name: "CardITem",
+    props:['header','txt','src']
 };
 </script>
 
 <style lang="scss" scoped>
 .card{
     width: 270px;
-    height: 410px;
     border: none;
     border-radius: 0px;
     display: flex;
     align-items: center;
     justify-content: center; 
-    transition: 0.4s ease-in;
+    border: 1px solid white;
+    margin-left: 2px;
 
     &:hover{
         border: 1px solid gray;
-         transition: 0.4s ease-in;
     }
     .card-img-top{
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 30px;
+    padding-bottom: 30px;
 .cirlce{
     display: flex;
     align-items: center;
@@ -70,7 +69,7 @@ export default {
         
     }
     .card-text{
-        width: 50%;
+        width: 60%;
         line-height: 2;
         font-size: 13px;
     }

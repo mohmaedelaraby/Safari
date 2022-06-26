@@ -32,6 +32,6 @@ export default {
   margin: 0;
 }
 .row{
-  margin: 0;
+  margin: 0px;
 }
 </style>

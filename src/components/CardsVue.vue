@@ -76,6 +76,7 @@ article{
   display: flex;
   justify-content: center;
   font-size: 14px;
+  margin-bottom: 100px;
   color: white;
   position: relative;
   .buytheme{

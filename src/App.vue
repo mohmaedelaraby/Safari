@@ -1,18 +1,22 @@
 <template>
   <NavBar></NavBar>
   <CardsVue></CardsVue>
+  <FilterSection/>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
 import CardsVue from "./components/CardsVue.vue";
+import FilterSection from "./components/Filteretion/FilterSection.vue";
 
 
 export default {
   name: "App",
   components: {
-    NavBar,CardsVue
-  },
+    NavBar,
+    CardsVue,
+    FilterSection
+},
 };
 </script>
 
@@ -22,7 +26,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 .nav-link.dropdown-toggle::after {

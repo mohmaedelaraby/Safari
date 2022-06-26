@@ -26,6 +26,9 @@ export default {
   position: relative;
   .card-img-top {
     border-radius: 0px;
+    img{
+      margin: 0;
+    }
   }
   .card_header {
     font-size: 15px;

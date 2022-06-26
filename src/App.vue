@@ -2,12 +2,14 @@
   <NavBar></NavBar>
   <CardsVue></CardsVue>
   <FilterSection/>
+  <FooterSection/>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
 import CardsVue from "./components/CardsVue.vue";
 import FilterSection from "./components/Filteretion/FilterSection.vue";
+import FooterSection from "./components/FooterSection.vue";
 
 
 export default {
@@ -15,7 +17,8 @@ export default {
   components: {
     NavBar,
     CardsVue,
-    FilterSection
+    FilterSection,
+    FooterSection
 },
 };
 </script>
@@ -33,6 +36,7 @@ export default {
 }
 * {
   margin: 0;
+  overflow-x: hidden;
 }
 .row{
   margin: 0px;

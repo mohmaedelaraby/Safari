@@ -2,16 +2,12 @@
   <div class="card">
     <div class="card__container">
       <div class="card__upper">
-        <h2>TESTIMONIALS</h2>
+        <h2>{{header}}</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit aliquam</p>
       </div>
 
       <div class="card__lower">
-        <p class="card__txt">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad ortis nisl ut aliquio consequat.
-        </p>
+        <p class="card__txt">{{txt}}</p>
         <p class="card__signture">Morton Reder <strong>Co-Founder</strong></p>
       </div>
     </div>
@@ -19,7 +15,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+    props:['header','txt']
+};
 </script>
 
 <style lang="scss" scoped>

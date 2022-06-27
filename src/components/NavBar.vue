@@ -210,17 +210,30 @@ export default {
   }
 }
 @media screen and (max-width: 770px) {
-    .search__icon__container{
+  .navbar{
+padding: 0;
+.search__icon__container{
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        background-color: red;
+        background-color: #88888888;
         width: 100%;
         height: 40px;
         .search__icon {
         height: 20px;
         margin-right: 25px;
       }
+      .input__active{
+        width: 90%;
+    height: 100%;
+    /* color: gray; */
+    background-color: #888888;
+    border: none;
+    color: white;
+    outline: none;
+      }
     }
+  }
+    
 }
 </style>

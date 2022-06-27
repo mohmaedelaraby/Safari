@@ -82,7 +82,7 @@ export default {
  -->
 
 <template>
-  <swiper :navigation="true" :modules="modules" class="mySwiper">
+  <swiper :navigation="true" :modules="modules"  class="mySwiper">
     <swiper-slide v-for="(item,index) in listofdata" v-bind:key="index">
       <TestMonelieCart :header="item.header" :txt="item.txt" />
     </swiper-slide>

@@ -24,6 +24,9 @@ export default {
   border-radius: 0px;
   border: none;
   position: relative;
+  @media (max-width: 320px) {
+        width: 100%;
+      }
   .card-img-top {
     border-radius: 0px;
     img{
@@ -34,10 +37,16 @@ export default {
     font-size: 15px;
     font-weight: 500;
     color: #444444;
+    @media (max-width:770px) {
+      font-size: 10px;
+    }
   }
   .card-text {
     font-size: 13px;
     color: #444444;
+     @media (max-width:770px) {
+      font-size: 8px;
+    }
   }
   .card__layout {
     position: absolute;

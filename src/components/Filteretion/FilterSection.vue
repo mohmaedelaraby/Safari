@@ -26,15 +26,15 @@
         </div>
       </div>
       <div class="row">
-          <div class="container">
-            <FilterCard
-              v-for="item in posts"
-              v-bind:key="item.id"
-              :header="item.title"
-              :src="item.img"
-              :txt="item.txt"
-            />
-          </div>
+        <div class="container">
+          <FilterCard
+            v-for="item in posts"
+            v-bind:key="item.id"
+            :header="item.title"
+            :src="item.img"
+            :txt="item.txt"
+          />
+        </div>
       </div>
     </section>
   </div>
@@ -97,6 +97,9 @@ section {
         p {
           width: 80%;
         }
+        @media (max-width: 320px) {
+          margin-bottom: 70px;
+        }
       }
       .filter_buttons {
         width: 80%;
@@ -104,6 +107,13 @@ section {
         margin-bottom: 100px;
         display: flex;
         justify-content: center;
+        @media (max-width: 320px) {
+          width: 100%;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
         button {
           cursor: pointer;
           border: 1px solid gray;
@@ -114,23 +124,38 @@ section {
           padding-left: 15px;
           padding-right: 15px;
           color: #686868;
+          @media (max-width: 320px) {
+            cursor: pointer;
+            border: 1px solid gray;
+            background-color: transparent;
+            margin-left: 7px;
+            font-size: 14px;
+            padding: 6px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: #686868;
+            margin: 8px;
+            margin-right: 37px;
+          }
           &:hover {
             color: #5cc8c5;
             border: 1px solid #5cc8c5;
           }
         }
       }
-  
     }
 
-        .container{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 100px;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 100px;
+      @media (max-width: 320px) {
+        flex-direction: column;
       }
+    }
   }
 }
 </style>

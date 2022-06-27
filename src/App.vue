@@ -74,4 +74,21 @@ export default {
   font-size: 14px;
   color: white;
 }
+ @media (max-width:770px) {
+      .swiper-button-next{
+        right: 75px;
+      }
+      .swiper-button-prev{
+        left: 75px;
+      }
+    }
+
+     @media (max-width:320px) {
+     .swiper-button-next{
+        right: 5px;
+      }
+      .swiper-button-prev{
+        left: 5px;
+      }
+    }
 </style>

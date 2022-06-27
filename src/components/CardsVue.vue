@@ -70,6 +70,11 @@ export default {
   justify-content: space-evenly;
   margin-top: 100px;
   margin-bottom: 100px;
+  @media (max-width:320px) {
+       flex-direction: column;
+       align-items: center;
+       margin-top: 40px;margin-bottom: 60px;
+       }
 }
 article{
   width: 30%;
@@ -79,10 +84,19 @@ article{
   margin-bottom: 100px;
   color: white;
   position: relative;
+   @media (max-width: 770px) {
+        width: 51%;
+      }
+      @media (max-width:320px) {
+        width: 100%;
+       }
   .buytheme{
     background-color: #444444;
     padding: 15px;
     padding-right: 20px;
+      @media (max-width: 770px) {
+          padding-right: 30px;
+    }
   }
   .or{
             position: absolute;
@@ -97,6 +111,9 @@ article{
     display: flex;
     align-items: center;
     justify-content: center;
+     @media (max-width:320px) {
+        width: 13%;
+       }
     
   }
   .viewdemo{
@@ -104,6 +121,9 @@ article{
     background-color: #5CC8C5;
     padding: 15px;
     padding-right: 20px;
+    @media (max-width: 770px) {
+          padding-left: 30px;
+    }
   }
 }
 }

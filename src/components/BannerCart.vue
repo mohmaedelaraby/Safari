@@ -31,11 +31,16 @@ export default {
   align-items: center;
   color: white;
   background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("@/assets/bg.png");
+  border-radius: 0;
+  border: 0;
   .card__container {
     width: 80%;
     display: flex;
     flex-direction: column;
     padding: 50px;
+     @media (max-width:320px) {
+     padding: 0;
+    }
     .card__upper {
       margin-top: 100px;
       margin-bottom: 55px;
@@ -65,6 +70,12 @@ export default {
        align-items: center;
        justify-content: space-between;
        width: 24%;
+       @media (max-width:770px) {
+        width: 55%;
+       }
+       @media (max-width:320px) {
+        width: 90%;
+       }
        .btn{
         width: 48%;
         border-radius: 5px;

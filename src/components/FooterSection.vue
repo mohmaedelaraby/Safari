@@ -72,7 +72,7 @@
           <div class="col-xl-3 col-sm-6 col-xs-12">
             <div class="row">
               <ul>
-                <li v-for="item in 5" v-bind:key="item">
+                <li v-for="item in 6" v-bind:key="item">
                   <div class="list-item">
                     <div class="list-item-arrow">
                       <img src="@/assets/Shape6.svg" alt="x" />
@@ -117,6 +117,9 @@ export default {
 section {
   .row {
     margin: 0;
+    .col-sm-6{
+      margin-top: 40px;
+    }
     .header {
       width: 100%;
       background-color: #52a7dd;
@@ -130,6 +133,10 @@ section {
         align-items: center;
         justify-content: space-between;
         width: 40%;
+
+         @media (max-width:770px) {
+      width: 60%;
+    }
 
         p {
           color: white;

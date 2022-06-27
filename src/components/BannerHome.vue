@@ -1,41 +1,49 @@
 <template>
-    <div class="banner_bg">
-        <div class="banner_bg_contianer">
-            <SwipperCompnent>
-                LLLL
-            </SwipperCompnent>
-        </div>
-    </div>
+  <swiper :navigation="true" :modules="modules" class="mySwiper">
+    <swiper-slide v-for="(item, index) in listofdata" v-bind:key="index">
+      <BannerCart :txt="item.txt" />
+    </swiper-slide>
+  </swiper>
 </template>
-
 <script>
-import SwipperCompnent from './SwipperCompnent.vue'
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/navigation";
+
+// import required modules
+import { Navigation } from "swiper";
+import BannerCart from "./BannerCart.vue";
+
 export default {
-    data(){
-        return{
-            listOfData:["THEME FOR CREATIVES & DOING THEME BUSINESS NOW","DOING THEME BUSINESS NOW"]
-        }
-    },
-    components: { SwipperCompnent }
-} 
+  components: {
+    Swiper,
+    SwiperSlide,
+    BannerCart
+},
+
+  data() {
+    return {
+      listofdata: [
+        {
+          txt: "Forst #1",
+        },
+        {
+          txt: "Forst #2",
+        },
+        {
+          txt: "Forst #3",
+        },
+      ],
+    };
+  },
+  setup() {
+    return {
+      modules: [Navigation],
+    };
+  },
+};
 </script>
-
-<style lang="scss" scoped>
-.banner_bg{
-    background: url("@/assets/bg.png");
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .banner_bg_contianer{
-        background-color: red;
-        width: 90%;
-        height: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-</style>

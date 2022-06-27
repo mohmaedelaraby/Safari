@@ -7,7 +7,7 @@
       </div>
 
       <div class="card__lower">
-        <p class="card__txt">for Themeforest
+        <p class="card__txt">for {{txt}}
         </p>
         <div class="card__btns">
             <button type="button" class="btn btn-primary">Live Demo</button>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    props:['header','txt']
+    props:['txt']
 };
 </script>
 

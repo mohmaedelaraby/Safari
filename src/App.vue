@@ -1,6 +1,6 @@
 <template>
   <NavBar></NavBar>
-  <BannerCart/>
+  <BannerHome/>
   <CardsVue></CardsVue>
   <FilterSection />
   <TestMoneliesSwipper />
@@ -14,7 +14,7 @@ import FilterSection from "./components/Filteretion/FilterSection.vue";
 import FooterSection from "./components/FooterSection.vue";
 
 import TestMoneliesSwipper from "./components/TestMoneliesSwipper.vue";
-import BannerCart from "./components/BannerCart.vue";
+import BannerHome from "./components/BannerHome.vue";
 
 export default {
   name: "App",
@@ -24,7 +24,7 @@ export default {
     FilterSection,
     FooterSection,
     TestMoneliesSwipper,
-    BannerCart
+    BannerHome
 },
 };
 </script>

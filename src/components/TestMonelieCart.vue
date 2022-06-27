@@ -7,7 +7,8 @@
       </div>
 
       <div class="card__lower">
-        <p class="card__txt">{{txt}}</p>
+        <p class="card__txt">{{txt}}
+        </p>
         <p class="card__signture">Morton Reder <strong>Co-Founder</strong></p>
       </div>
     </div>

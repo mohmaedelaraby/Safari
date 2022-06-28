@@ -132,31 +132,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.swiper-button-next {
-  right: 125px;
-  left: auto;
-  background-color: #8888;
-  padding: 30px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.swiper-button-next::after {
-  content: "next";
-  font-size: 14px;
-  color: white;
-}
-
-.swiper-button-prev {
-  left: 125px;
-  right: auto;
-  background-color: #8888;
-  padding: 30px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.swiper-button-prev::after {
-  content: "prev";
-  font-size: 14px;
-  color: white;
-}
 </style>

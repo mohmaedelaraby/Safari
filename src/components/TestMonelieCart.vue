@@ -22,49 +22,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #222222;
-  .card__container {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    .card__upper {
-      margin-top: 100px;
-      margin-bottom: 55px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      h2 {
-        margin-bottom: 50px;
-        font-weight: 600;
-      }
-      p {
-        width: 80%;
-      }
-    }
-    .card__lower {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 50px;
-      .card__txt {
-        font-size: 16px;
-        line-height: 1.6;
-        width: 70%;
-        font-style: italic;
-      }
-      .card__signture {
-        font-size: 16px;
-        strong {
-          color: #88888888;
-        }
-      }
-    }
-  }
-}
+@import '@/assets/styles/compnonets/TestMoneliesCart.scss'
 </style>

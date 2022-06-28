@@ -42,7 +42,7 @@ export default {
 }
 * {
   margin: 0;
-  overflow-x: hidden;
+
 }
 .row {
   margin: 0px;
